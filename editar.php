@@ -91,12 +91,12 @@ $conn->close();
 
                 <div class="form-group col-p-5">
                     <label for="nombre" class="col-form-label"><b>Nombre:</b></label>
-                    <input class="form-control" type="text" name="nombre" value="<?php echo $nombre; ?>"
+                    <input class="form-control" type="text" name="nombre" value="<?php echo $nombre; ?>" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
                         placeholder="Nombre" required>
                 </div>
                 <div class="form-group col-p-5">
                     <label for="correo" class="col-form-label"><b>Correo:</b></label>
-                    <input type="email" id="correo" value="<?php echo $correo; ?>" name="correo" placeholder="correo"
+                    <input type="email" id="correo" value="<?php echo $correo; ?>" name="correo" placeholder="correo"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                         class="form-control" required>
                 </div>
                 <div>

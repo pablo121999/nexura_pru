@@ -21,7 +21,16 @@ if (!empty($idsave)) { ?>
     <div class="container">
         <div class=" justify-content-center  align-items-left ">
             <div class="alert alert-success alert-dismissible fade show text-center" role="alert" s>
-                <strong>Se Agrego El Registro Correctamente.</strong>
+                <strong>
+
+                    <!-- icono -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+
+                    Se Agrego El Registro Correctamente.</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
@@ -50,11 +59,13 @@ if (!empty($idsave)) { ?>
 
                 <div class="form-group col-p-5">
                     <label for="nombre" class="col-form-label"><b>Nombre:</b></label>
-                    <input class="form-control" type="text" name="nombre" placeholder="Nombre" required>
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+                        required>
                 </div>
                 <div class="form-group col-p-5">
                     <label for="correo" class="col-form-label"><b>Correo:</b></label>
-                    <input type="email" id="correo" name="correo" placeholder="correo" class="form-control" required>
+                    <input type="email" id="correo" name="correo" placeholder="correo" class="form-control"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                 </div>
                 <div>
                     <label for="masculino" class="col-form-label"><b>Genero:</b></label>
@@ -83,7 +94,7 @@ if (!empty($idsave)) { ?>
                         required></textarea>
                 </div>
                 </br>
-               
+
                 <div class="form-group col-p-5">
                     <input type="checkbox" name="boletin" value="<?php echo $boletin; ?>">
                     <label for="boletin" class="col-form-label"><b>Desea recibir boletín informativo</b></label>
@@ -147,9 +158,9 @@ if (!empty($idsave)) { ?>
             $idEmpleado = $conn->insert_id; // obtener el id del empleado recien registrado
             $sqlrol = "INSERT INTO empleado_rol (empleado_id,rol_id) VALUES ('$idEmpleado', '$roles')";
             if ($conn->query($sqlrol) === TRUE) {
-                
-                  //autoenvio el id para confirmar registro
-         echo " <script> window.location.href='index.php ?idsave=<?php echo sanitize(".$idEmpleado."); ?> '; </script> ";
+
+                //autoenvio el id para confirmar registro
+                echo " <script> window.location.href='index.php ?idsave=<?php echo sanitize(" . $idEmpleado . "); ?> '; </script> ";
 
             } else {
                 echo "Error al insertar el registro: " . $conn->error;
