@@ -28,7 +28,7 @@ if ($accion == "Actualizar") {
 
     }
     //envia el id para confirmar 
-    echo " <script> window.location.href='mostrar.php ?idupdate=<?php echo sanitize(" . $txtid . "); ?> '; </script> ";
+    echo " <script> window.location.href='index.php ?idupdate=<?php echo sanitize(" . $txtid . "); ?> '; </script> ";
 }
 
 // cargar informacion

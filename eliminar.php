@@ -13,7 +13,7 @@ if ($txtid != "") {
         //cerrar conexion
         $conn->close();
           //envio el id para confirmar eliminacion
-          echo " <script> window.location.href='mostrar.php ?iddel=<?php echo sanitize(".$txtid."); ?> '; </script> ";
+          echo " <script> window.location.href='index.php ?iddel=<?php echo sanitize(".$txtid."); ?> '; </script> ";
     } else {
         echo "Error al eliminar: "; //$conn->error;
 

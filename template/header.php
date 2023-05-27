@@ -61,7 +61,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" type="button" aria-current="page"
-                        onclick=location.href="mostrar.php"><i>Lista Empleado</i></a>
+                        onclick=location.href="crear.php"><i>Crear Empleado</i></a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
