@@ -83,8 +83,8 @@ $conn->close();
 
         <div class="col-auto bg-ligth p-5 ">
             <i>
-                <h1>lista</h1>
-                <h2>Crear Usuario</h2>
+                <h3>Actualizar Empleado</h3>
+              
             </i>
 
             <form onsubmit="return validarFormulario();" method="POST" enctype="multipart/form-data">

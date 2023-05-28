@@ -100,7 +100,7 @@ if (!empty($iddel)) { ?>
 
 
 <div class="container">
-
+</br>
 <div class="d-flex justify-content-between">
     <div></div> 
     <button type="button" class="btn btn-success ml-auto text-right" name="crear" onclick="location.href='crear.php'"

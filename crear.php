@@ -84,8 +84,7 @@ $result = $conn->query($sql);
 
                 </br>
                 <button type="submit" class="btn btn-success">Crear</button>
-                <button type="button" class="btn btn-warning" onclick=location.href="mostrar.php"> Ver Empleados
-                </button>
+            
             </form>
 
         </div>
